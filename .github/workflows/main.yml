@@ -27,9 +27,10 @@ jobs:
       - if: matrix.targetPlatform == 'Android'
         uses: jlumbroso/free-disk-space@v1.2.0
       - uses: game-ci/unity-builder@v2
+          with: 
+            projectPath: ./YATSS-Lost-Miner/
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-        projectPath: /YATSS-Lost-Miner/
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
       - uses: actions/upload-artifact@v3
