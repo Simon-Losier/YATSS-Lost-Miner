@@ -16,7 +16,7 @@ Mining game where you have to escort a minecart to the end of the mine with mons
 You are lost in an abandoned mine shaft and you have to bring your quota of gold home.
 
 ## Gameplay
-## Core Loop
+### Core Loop
 Core gameplay loop of the game.
 
 There would be mine cart that is always advancing, creating a sense of ergency. The player will have to stock the mine cart of gold 
