@@ -10,6 +10,7 @@ Endless style game where you have to escort a minecart to the end of the mine
 # Insperation
 1. Binding of isaac
     1. Combat and movement would work great with this game
+    2. Rogue-Like
 2. Deep rock galatic
     1. The concept of having a mining quota to aquire and to have to fight while mining.
 
@@ -24,9 +25,35 @@ There would be mine cart that is always advancing, creating a sense of ergency. 
 
 ## Mechanics
 List all relevant mechanics and their use
+- Cart moves forward at all time
+- Gold must be mined and brought to the cart to meet the quota
+- Monsters will try to destroy the cart
+- Rails may be destroyed and must be repaired with steel.
 
+## Movement/controls
+### Mobile(excluded for CS50 submition):
+On screen joystick and another button for shooting/mining in the direction of movement. 
+
+### PC version:
+Movement is inspired from binding of isaac, left stick(WASD) would control the player and A,B,X,Y(arrow keys) would control the attacking/mining. 
+
+<!--
 ## Dynamics
 List and explain how mechanics tie into this
+
+## Aesthetics
+-->
+
+## Level Design
+The level will be a procedurally generated mineshaft that would be long enough for the level to last 1-2 minutes. Gold, steel and monster placement would be procedurally generated. 
+2D rough Sketch of a level: 
+![Level](https://github.com/Simon-Losier/YATSS-Lost-Miner/assets/98567864/7d4e9c10-263f-478f-bc86-38fd2127b900)
+
+### Look
+3D Game set underground in a mineshaft
+Assetpacks to be used:
+- https://kenney.nl/assets/mini-dungeon
+- https://kenney.nl/assets/nature-kit
 
 # CS50g Requirement: Complexity and Distinctiveness 
 ## Complexity
