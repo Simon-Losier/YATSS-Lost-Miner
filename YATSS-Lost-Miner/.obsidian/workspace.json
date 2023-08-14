@@ -1,0 +1,155 @@
+{
+  "main": {
+    "id": "c54d97157392f318",
+    "type": "split",
+    "children": [
+      {
+        "id": "46711ffc4ba6933e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be7a4ec86a85cd43",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ba4d3c29d3e4d4c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d2513ecfc33cd61e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b9fb4f6873a432a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a3fdeb9e184693ee",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "cc7b29a067623403",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3388a166f50a49ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "3daa04b052b27de9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fc4394c3d981282",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "170ac453e1988c2b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "210751ef0ce84a70",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "dbee1b394bd0d500",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "5b9fb4f6873a432a",
+  "lastOpenFiles": [
+    "Library/Search/98957a664bd18c47a3e41b2a0189ef53.32805.3.index",
+    "Library/Artifacts/dd/dd2ab07fa10f8f704374c2cf2c7481ae",
+    "Library/Artifacts/87/87f1a1634c69c9a7295e2d8e6bbed62e",
+    "Library/Artifacts/7d/7d0de3086650e160eeb0a558877371c9",
+    "Library/Artifacts/6d/6d78d9358fcb17b946bde3fd73ec667e",
+    "Library/Artifacts/b9/b9b7e7fe095fe211a3f27b850cb23513",
+    "Library/Artifacts/6c/6c74e6878173c2dc11968ac2c7c97d7b",
+    "Library/Artifacts/0a/0a223f2b8903d4d46b674cf29ea01847",
+    "Library/Artifacts/3a/3aaa2704894dc3f2aece571dcfe87c6c",
+    "Library/Artifacts/9f/9f6e9b19ad611fdd1ca0d8c8bf9745bb",
+    "Library/Artifacts/59/595a3a6d8d6651c40f6a101f8003aee6"
+  ]
+}
