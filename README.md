@@ -3,9 +3,7 @@ YATSS: Lost Miner | Simon's Havard's CS50g final project
 
 GDD:
 # Summary
-Endless style game where you have to escort a minecart to the end of the mine 
-
-# Unique features
+Mining game where you have to escort a minecart to the end of the mine with monsters trying to stop you. The minecart never stops. 
 
 # Insperation
 1. Binding of isaac
