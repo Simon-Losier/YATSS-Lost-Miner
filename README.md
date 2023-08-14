@@ -1,6 +1,9 @@
 # YATSS-Lost-Miner
 YATSS: Lost Miner | Simon's Havard's CS50g final project
 
+# Contributions
+Due to havard academic integrity rules, until the cs50 assignment is submitted and graded contributions(pull requests, bug reports, etc) will be ignored.
+
 # Game Design Doc
 ## Summary
 Mining game where you have to escort a minecart to the end of the mine with monsters trying to stop you. The minecart never stops. 
