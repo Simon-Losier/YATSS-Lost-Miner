@@ -1,18 +1,22 @@
 {
   "main": {
-    "id": "c54d97157392f318",
+    "id": "2cb30286d64c85fd",
     "type": "split",
     "children": [
       {
-        "id": "46711ffc4ba6933e",
+        "id": "c0ef31aa83ade219",
         "type": "tabs",
         "children": [
           {
-            "id": "be7a4ec86a85cd43",
+            "id": "c2aa31b081e0d7e3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -21,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "ba4d3c29d3e4d4c2",
+    "id": "d0ae0fa3f183348e",
     "type": "split",
     "children": [
       {
-        "id": "d2513ecfc33cd61e",
+        "id": "318236953a552a4b",
         "type": "tabs",
         "children": [
           {
-            "id": "5b9fb4f6873a432a",
+            "id": "29c07fc90bf482e6",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +43,7 @@
             }
           },
           {
-            "id": "a3fdeb9e184693ee",
+            "id": "d860b277185f84bb",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +58,7 @@
             }
           },
           {
-            "id": "cc7b29a067623403",
+            "id": "fdefa68a96a78c16",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -68,19 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "3388a166f50a49ba",
+    "id": "b9f06c848e4e0b4a",
     "type": "split",
     "children": [
       {
-        "id": "3daa04b052b27de9",
+        "id": "6380dfc00c8b6b5e",
         "type": "tabs",
         "children": [
           {
-            "id": "9fc4394c3d981282",
+            "id": "6034d5a384082add",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,18 +97,19 @@
             }
           },
           {
-            "id": "170ac453e1988c2b",
+            "id": "a6934e5d51e8c70a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "210751ef0ce84a70",
+            "id": "fdb0c97ae6b0a332",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,11 +120,13 @@
             }
           },
           {
-            "id": "dbee1b394bd0d500",
+            "id": "2fe3d160e034778b",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "README.md"
+              }
             }
           }
         ]
@@ -138,18 +146,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be7a4ec86a85cd43",
+  "active": "c2aa31b081e0d7e3",
   "lastOpenFiles": [
-    "Library/ProtocolInstance.json",
-    "Library/Bee/TundraBuildState.state",
-    "Library/Artifacts/e7/e784c5e3c38d1bbf02e0de7b721f1a17",
-    "Library/Artifacts/4c/4c3a9812bc198027f44df52816753b39",
-    "Library/Artifacts/05/05cbc2d45837705c45f0d963ace30d3d",
-    "Logs/shadercompiler-AssetImportWorker0.log",
-    "Temp/FSTimeGet-eaab95678bc3c664eb841bd7a439c9d7",
-    "Temp/FSTimeGet-40574242751ffc541a67252809e6ecb1",
-    "Logs/AssetImportWorker1.log",
-    "Logs/AssetImportWorker0.log",
-    "Temp/__Backupscenes/0.backup"
+    "YATSS-Lost-Miner/Library/ProtocolInstance.json",
+    "YATSS-Lost-Miner/Library/Bee/TundraBuildState.state",
+    "YATSS-Lost-Miner/Library/Artifacts/52/5253d49856558c08955c4e60bd7b0904",
+    "YATSS-Lost-Miner/Library/Artifacts/4c/4c3a9812bc198027f44df52816753b39",
+    "YATSS-Lost-Miner/Library/Artifacts/da/da6823636801f49032d011f67f3d1050",
+    "YATSS-Lost-Miner/Logs/shadercompiler-AssetImportWorker0.log",
+    "YATSS-Lost-Miner/Temp/FSTimeGet-eaab95678bc3c664eb841bd7a439c9d7",
+    "YATSS-Lost-Miner/Temp/FSTimeGet-40574242751ffc541a67252809e6ecb1",
+    "YATSS-Lost-Miner/Logs/AssetImportWorker1.log",
+    "YATSS-Lost-Miner/Logs/AssetImportWorker0.log",
+    "YATSS-Lost-Miner/Temp/__Backupscenes/0.backup"
   ]
 }
