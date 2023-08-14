@@ -5,7 +5,7 @@ GDD:
 # Summary
 Mining game where you have to escort a minecart to the end of the mine with monsters trying to stop you. The minecart never stops. 
 
-# Insperation
+# Inspiration
 1. Binding of isaac
     1. Combat and movement would work great with this game
     2. Rogue-Like
