@@ -53,13 +53,17 @@ The level will be a procedurally generated mineshaft that would be long enough f
 
 #### Look
 3D Game set underground in a mineshaft
-Assetpacks to be used:
+Asset packs to be used:
 - https://kenney.nl/assets/mini-dungeon
 - https://kenney.nl/assets/nature-kit
 
 # General Documentation
 Current documentation is mostly in the project/issues
-https://github.com/users/Simon-Losier/projects/6/views/1
+https://github.com/users/Simon-Lohttps://github.com/users/Simon-Losier/projects/6/views/1sier/projects/6/views/1
+
+
+## Movement/Shooting System
+The movement system uses the new unity input system to handle input. To do this I used a combination of this tutorial: https://www.youtube.com/watch?v=m5WsmlEOFiA and the unity input system docs: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.6/manual/index.html
 
 
 # CS50g Requirement: Complexity and Distinctiveness 
