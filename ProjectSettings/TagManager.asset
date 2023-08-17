@@ -8,14 +8,15 @@ TagManager:
   - Steel
   - Cart
   - BrokenRail
+  - Projectile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Projectile
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 

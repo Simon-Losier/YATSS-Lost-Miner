@@ -83,6 +83,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ec73965428fb8454e98ae965f3ce659d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1998100981861735488}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ec73965428fb8454e98ae965f3ce659d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1633754015259046337}
   m_SourcePrefab: {fileID: 100100000, guid: ec73965428fb8454e98ae965f3ce659d, type: 3}
 --- !u!1 &8067626654257205289 stripped
 GameObject:
@@ -110,3 +113,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.76478827, y: 0.8837795, z: 0.7700375}
   m_Center: {x: 0, y: 0.44188976, z: 0}
+--- !u!114 &1633754015259046337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8067626654257205289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5376dfde5290a40a268aafd3847ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oreType: steel
+  health: 2

@@ -50,6 +50,5 @@ public class PlayerController : MonoBehaviour
     public void onAttack(InputAction.CallbackContext context)
     {
         attack = context.ReadValue<float>();
-        Debug.Log(attack);
     }
 }
