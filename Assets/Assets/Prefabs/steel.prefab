@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oreType: steel
+  Ingot: {fileID: 2522817596534639507, guid: 51669db339e6d0946a889f90c61cc1c3, type: 3}
   health: 2

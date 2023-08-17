@@ -7,7 +7,7 @@ using UnityEngine;
 public class oreController : MonoBehaviour
 {
     public string oreType = "gold"; // Possible: gold, steel
-
+    public GameObject Ingot;
     public int health = 2;
     
     void Start()
@@ -24,7 +24,7 @@ public class oreController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Projectile"));
+        if (other.gameObject.CompareTag("Projectile"))
         {
             hit();
         }
@@ -36,6 +36,7 @@ public class oreController : MonoBehaviour
         if (health <= 0)
         {
             // Drop ore item
+            Instantiate(Ingot, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject, 0);
         }
     }

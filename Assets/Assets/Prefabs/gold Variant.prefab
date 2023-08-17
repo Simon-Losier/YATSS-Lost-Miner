@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oreType: gold
+  Ingot: {fileID: 2522817596534639507, guid: 3cf1d323ed437574fad90a1688426795, type: 3}
   health: 2
