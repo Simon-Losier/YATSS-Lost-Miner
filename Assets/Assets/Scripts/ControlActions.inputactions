@@ -20,7 +20,7 @@
                     "id": "1f8959d4-11ac-4df7-bcc5-34759ee6b67c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "SlowTap",
                     "initialStateCheck": true
                 }
             ],

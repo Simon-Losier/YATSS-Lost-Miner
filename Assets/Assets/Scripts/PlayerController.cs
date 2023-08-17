@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private float attack;
     public int speed = 5;
     public GameObject projectile;
+    public bool allowShoot = true;
 
 
     // Update is called once per frame
@@ -22,16 +23,23 @@ public class PlayerController : MonoBehaviour
             transform.right = new Vector3(movementDirection.x, 0, movementDirection.y);
         }
 
-        if (attack == 1)
+        if (attack == 1 && allowShoot)
         {
             shoot();
+            allowShoot = false;
+        }
+
+        if (attack == 0)
+        {
+            allowShoot = true;
         }
     }
 
     private void shoot()
     {
         // Create the mining orb
-        GameObject instance = Instantiate(projectile, transform.position + new Vector3(transform.right.x, 0, transform.right.y), transform.rotation);
+        float distanceFromPlayer = 0.2f;
+        GameObject instance = Instantiate(projectile, transform.position, transform.rotation);
         instance.transform.right = transform.right;
     }
     public void onMove(InputAction.CallbackContext context)
