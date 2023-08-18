@@ -77,7 +77,10 @@ public class worldGenerator : MonoBehaviour
         int numSentry = Random.Range(0, maxNumSentry+1);
         for (int i = 0; i < numSentry; i++)
         {
-            
+            int posX = Random.Range(0, length);
+            Vector3 position = new Vector3(Random.Range(0, length), 0, 10);
+            Instantiate(sentry, position, Quaternion.identity);
         }
+        
     }
 }
