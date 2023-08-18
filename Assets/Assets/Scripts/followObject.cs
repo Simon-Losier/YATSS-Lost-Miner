@@ -19,5 +19,3 @@ public class followObject : MonoBehaviour
         transform.position = new Vector3(Player.transform.position.x, transform.position.y, transform.position.z);
     }
 }
-=============
-const const const hi = hello!

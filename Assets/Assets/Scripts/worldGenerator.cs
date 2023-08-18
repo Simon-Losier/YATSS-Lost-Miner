@@ -11,6 +11,10 @@ public class worldGenerator : MonoBehaviour
     public GameObject rails;
     public GameObject initRail; // We take the position, rotation and scale from the in world object to summon the others, so it must be within the level
     public GameObject brokenRail;
+
+    public GameObject sentry;
+    public int maxNumSentry = 3;
+    public int maxBrokenRail = 3;
     
     public int length = 80;
 
@@ -23,9 +27,9 @@ public class worldGenerator : MonoBehaviour
 
     void generateWorld()
     {
-        // Create rocks
         for (int x = 0; x < length; x += interval)
         {
+            // Ore
             int verticalHeight = 10;
             int amountOfOre = Random.Range(2, 5);
             for (int i = 0; i < amountOfOre; i++)
@@ -56,8 +60,8 @@ public class worldGenerator : MonoBehaviour
         {
             Vector3 position = new Vector3(initRail.transform.position.x + (x * lengthOfRailModule), initRail.transform.position.y,
                 initRail.transform.position.z);
-            int immuneRails = 5;
-            if (x>immuneRails && Random.Range(0, 10) > 5) 
+            int immuneRails = 10;
+            if (x>immuneRails && Random.Range(0, 10) > 8) 
             {
                 Debug.Log("Broken rail summoned");
                 GameObject rail = Instantiate(brokenRail, position, initRail.transform.rotation);
@@ -67,6 +71,13 @@ public class worldGenerator : MonoBehaviour
             {
                 Instantiate(initRail, position, initRail.transform.rotation);
             }
+        }
+        
+        // Sentry procedural generation
+        int numSentry = Random.Range(0, maxNumSentry+1);
+        for (int i = 0; i < numSentry; i++)
+        {
+            
         }
     }
 }
