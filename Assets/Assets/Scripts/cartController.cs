@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class cartController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,5 +16,13 @@ public class cartController : MonoBehaviour
     void Update()
     {
         transform.position += direction * Time.deltaTime;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("BrokenRail"))
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

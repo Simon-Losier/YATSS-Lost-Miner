@@ -44,6 +44,15 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""SlowTap"",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Fix"",
+                    ""type"": ""Button"",
+                    ""id"": ""2209da59-a780-452a-ad5b-fba6b3f908e0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -134,6 +143,28 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4fd4216d-04f9-48aa-9a4b-8431ed92b98f"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fix"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""99b9732e-f588-4fbf-852a-ce4707673275"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fix"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -144,6 +175,7 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
         m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
         m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
         m_Game_Attack = m_Game.FindAction("Attack", throwIfNotFound: true);
+        m_Game_Fix = m_Game.FindAction("Fix", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,12 +239,14 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
     private List<IGameActions> m_GameActionsCallbackInterfaces = new List<IGameActions>();
     private readonly InputAction m_Game_Movement;
     private readonly InputAction m_Game_Attack;
+    private readonly InputAction m_Game_Fix;
     public struct GameActions
     {
         private @ControlActions m_Wrapper;
         public GameActions(@ControlActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Game_Movement;
         public InputAction @Attack => m_Wrapper.m_Game_Attack;
+        public InputAction @Fix => m_Wrapper.m_Game_Fix;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -228,6 +262,9 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @Fix.started += instance.OnFix;
+            @Fix.performed += instance.OnFix;
+            @Fix.canceled += instance.OnFix;
         }
 
         private void UnregisterCallbacks(IGameActions instance)
@@ -238,6 +275,9 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @Fix.started -= instance.OnFix;
+            @Fix.performed -= instance.OnFix;
+            @Fix.canceled -= instance.OnFix;
         }
 
         public void RemoveCallbacks(IGameActions instance)
@@ -259,5 +299,6 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnFix(InputAction.CallbackContext context);
     }
 }

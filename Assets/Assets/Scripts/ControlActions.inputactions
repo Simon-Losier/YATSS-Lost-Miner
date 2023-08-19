@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "SlowTap",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Fix",
+                    "type": "Button",
+                    "id": "2209da59-a780-452a-ad5b-fba6b3f908e0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -110,6 +119,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fd4216d-04f9-48aa-9a4b-8431ed92b98f",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fix",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99b9732e-f588-4fbf-852a-ce4707673275",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fix",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

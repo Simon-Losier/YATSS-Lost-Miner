@@ -11,10 +11,11 @@ public class worldGenerator : MonoBehaviour
     public GameObject rails;
     public GameObject initRail; // We take the position, rotation and scale from the in world object to summon the others, so it must be within the level
     public GameObject brokenRail;
-
+    public GameObject initSentry;
     public GameObject sentry;
     public int maxNumSentry = 3;
     public int maxBrokenRail = 3;
+    
     
     public int length = 80;
 
@@ -23,6 +24,7 @@ public class worldGenerator : MonoBehaviour
     void Start()
     {
         generateWorld();
+        Destroy(initSentry.gameObject);
     }
 
     void generateWorld()
@@ -77,9 +79,9 @@ public class worldGenerator : MonoBehaviour
         int numSentry = Random.Range(0, maxNumSentry+1);
         for (int i = 0; i < numSentry; i++)
         {
-            int posX = Random.Range(0, length);
+            int posX = Random.Range(10, length);
             Vector3 position = new Vector3(Random.Range(0, length), 0, 10);
-            Instantiate(sentry, position, Quaternion.identity);
+            Instantiate(sentry, position, initSentry.transform.rotation);
         }
         
     }

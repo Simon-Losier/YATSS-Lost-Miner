@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public int speed = 5;
     public GameObject projectile;
     public bool allowShoot = true;
-
+    private bool fixing = false; // For fixing rails
 
     // Update is called once per frame
     void Update()
@@ -35,6 +35,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool isFixing()
+    {
+        return fixing;
+    }
     private void shoot()
     {
         // Create the mining orb
@@ -50,5 +54,18 @@ public class PlayerController : MonoBehaviour
     public void onAttack(InputAction.CallbackContext context)
     {
         attack = context.ReadValue<float>();
+    }
+
+    public void onFix(InputAction.CallbackContext context)
+    {
+        float value = context.ReadValue<float>();
+        if (value == 1)
+        {
+            fixing = true;
+        }
+        else
+        {
+            fixing = false;
+        }
     }
 }
