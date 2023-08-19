@@ -20,8 +20,9 @@ public class cartController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("BrokenRail"))
+        if (other.gameObject.CompareTag("BrokenRail") || other.gameObject.CompareTag("AttackProjectile"))
         {
+            Debug.Log("Game Over");
             SceneManager.LoadScene("GameOver");
         }
     }

@@ -62,8 +62,8 @@ public class worldGenerator : MonoBehaviour
         {
             Vector3 position = new Vector3(initRail.transform.position.x + (x * lengthOfRailModule), initRail.transform.position.y,
                 initRail.transform.position.z);
-            int immuneRails = 10;
-            if (x>immuneRails && Random.Range(0, 10) > 8) 
+            int immuneRails = 0;
+            if (x>immuneRails && Random.Range(0, 10) > 5) 
             {
                 Debug.Log("Broken rail summoned");
                 GameObject rail = Instantiate(brokenRail, position, initRail.transform.rotation);
@@ -76,10 +76,10 @@ public class worldGenerator : MonoBehaviour
         }
         
         // Sentry procedural generation
-        int numSentry = Random.Range(0, maxNumSentry+1);
+        int numSentry = Random.Range(1, maxNumSentry+1);
         for (int i = 0; i < numSentry; i++)
         {
-            int posX = Random.Range(10, length);
+            int posX = Random.Range(30, length);
             Vector3 position = new Vector3(Random.Range(0, length), 0, 10);
             Instantiate(sentry, position, initSentry.transform.rotation);
         }

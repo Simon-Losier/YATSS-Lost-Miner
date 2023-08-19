@@ -20,6 +20,13 @@ public class railController : MonoBehaviour
                 fixRail();
             }
         }
+        else
+        {
+            if (other.gameObject.CompareTag("Cart"))
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+        }
     }
 
     private void fixRail()
