@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,16 @@ public class PlayerController : MonoBehaviour
     public bool allowShoot = true;
     private bool fixing = false; // For fixing rails
 
-    // Update is called once per frame
-    void Update()
+    private Rigidbody rigidbody;
+
+    private void Awake()
     {
-        transform.position += new Vector3(movementDirection.x, 0, movementDirection.y) * Time.deltaTime * speed;
+        rigidbody = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        rigidbody.velocity = new Vector3(movementDirection.x, 0, movementDirection.y) * Time.deltaTime * speed;
         
         // Citation for Vector2 based rotation: https://stackoverflow.com/questions/65752543/gameobject-rotation-based-vector2-direction
         if (!movementDirection.Equals(Vector2.zero))
@@ -23,6 +30,11 @@ public class PlayerController : MonoBehaviour
             transform.right = new Vector3(movementDirection.x, 0, movementDirection.y);
         }
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (attack == 1 && allowShoot)
         {
             shoot();

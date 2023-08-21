@@ -62,7 +62,7 @@ public class worldGenerator : MonoBehaviour
         {
             Vector3 position = new Vector3(initRail.transform.position.x + (x * lengthOfRailModule), initRail.transform.position.y,
                 initRail.transform.position.z);
-            int immuneRails = 0;
+            int immuneRails = 50;
             if (x>immuneRails && Random.Range(0, 10) > 5) 
             {
                 Debug.Log("Broken rail summoned");

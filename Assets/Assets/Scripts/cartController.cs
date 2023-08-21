@@ -5,17 +5,30 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class cartController : MonoBehaviour
 {
+    private Rigidbody rigidbody;
+
+    public int speed = 1;
     // Start is called before the first frame update
     public Vector3 direction = new Vector3(5, 0, 0);
     void Start()
     {
-        
+           
+    }
+
+    private void Awake()
+    {
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += direction * Time.deltaTime;
+        
+    }
+
+    private void FixedUpdate()
+    {
+        rigidbody.velocity = new Vector3(1 * speed, 0, 0);
     }
 
     private void OnCollisionEnter(Collision other)

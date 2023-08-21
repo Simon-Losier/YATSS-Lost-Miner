@@ -159,8 +159,8 @@ MonoBehaviour:
   brokenRail: {fileID: 7638476901921354166, guid: 65c48d2f486e3dc4daf15de7b18ce3c5, type: 3}
   initSentry: {fileID: 507018434}
   sentry: {fileID: 8042771671542778404, guid: 2f807230cd2dea848a23e85c2fef6387, type: 3}
-  maxNumSentry: 3
-  maxBrokenRail: 3
+  maxNumSentry: 10
+  maxBrokenRail: 0
   length: 80
   interval: 5
 --- !u!4 &126622963
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8be9ddf32a39f94b82ad97d5a8206d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 4
   direction: {x: 1, y: 0, z: 0}
 --- !u!65 &153593159
 BoxCollider:
@@ -217,6 +218,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.9051597, y: 5.655616, z: 2.7095275}
   m_Center: {x: 0.022998026, y: -0.00000007343481, z: 0.59301776}
+--- !u!54 &153593163
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153593154}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 124
+  m_CollisionDetection: 0
 --- !u!1 &280539463
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eab4bdd204b9f4409cc67b3e9dbddd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 400
   projectile: {fileID: 9077197317924185127, guid: d132eb033cda52849bf3069fba64e827, type: 3}
   allowShoot: 1
 --- !u!54 &280539470
@@ -1062,6 +1090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mineCart
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5fd5443529c4d7419ed2a4b0420c838, type: 3}
+      propertyPath: m_TagString
+      value: Cart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1072,6 +1104,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5fd5443529c4d7419ed2a4b0420c838, type: 3}
       insertIndex: -1
       addedObject: {fileID: 153593159}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5fd5443529c4d7419ed2a4b0420c838, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 153593163}
   m_SourcePrefab: {fileID: 100100000, guid: a5fd5443529c4d7419ed2a4b0420c838, type: 3}
 --- !u!1001 &5539110984493607652
 PrefabInstance:
