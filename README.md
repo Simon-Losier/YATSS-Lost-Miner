@@ -73,18 +73,28 @@ The senteries have a set number chosen procedurally that will determine the amou
 The rails are to a preset length, they start from a preset location. At each iteration of the rail there is a chance of it being broken.
 
 ## Ores
-- Ingot
-- Gold
-- Steel
-- 
+There are two types of ores, steel and gold. Steel is used to repair the broken rails and gold is used to reach the win state. The ores are mined using the shooting mechanic, they have a health of 2. When the ore is mined they drop a steel/gold ingot when this ingot is pickedup, the steel/gold is added to the inventory.
+
 ## Senteries
+Senteries goal is to sabotage the player by hurting the player. They can be destroyed by being mined by the player. Every two seconds they will try to hurt the cart by shooting downwards towards the rail. They do not aim towards the cart, this is to allow the player to better react to the situation. 
 
 ## Rails
-
+The cart runs on rails, they can be fixed if the player walks on them while holding F and the player has Steel in the inventory the rail will be repaired and the cart will be able to roll over the rail. This costs the player 1 steel. 
 
 ## States/Scenes
+- StartState | The player will see basic instructions of the game, and will be invited to start.
+- PlayState | This is the main game state, this is where the player will play the game
+- WinState | Displays "You Won", player may play again by pressing space
+- GameOverState | Displays "Game Over", player may play again by pressing space.
 
+## Win condition
+When the player reaches the gold quota by having enough gold in the inventory, the game is considerd won.
 
+## Loss Conditions
+The game will be lost in these events:
+- The cart is hit by a sentry bullet
+- The cart rolls over a broken rail
+- The player is hit by a sentry bullet
 
 # CS50g Requirement: Complexity and Distinctiveness 
 ### Complexity
