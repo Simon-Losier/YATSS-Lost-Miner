@@ -43,7 +43,11 @@ The game will be lost in these events:
 - The cart rolls over a broken rail
 - The player is hit by a sentry bullet
 
-# CS50g Requirement: Complexity and Distinctiveness 
+## Assets used
+- https://kenney.nl/assets/mini-dungeon
+- https://kenney.nl/assets/nature-kit
+
+## CS50g Requirement: Complexity and Distinctiveness 
 ### Complexity
 This game has a slightly higher complexity than the unity series of games. I beleave the game hits the complexity requirements as it contains similar systems as other games and mixes them. This game features procedural generation wich is present in most games of the term, item pickup, inventory system, enemies, shooting system. Comparing this to say Dreadhalls, wich contains only procedural generation and a type of pickup, this game is more complex since it contains more systems.
 
