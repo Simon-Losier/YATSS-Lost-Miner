@@ -11,7 +11,7 @@ The movement system uses the new unity input system to handle input. To do this 
 At first I used ```transform.position``` to move the player and the cart, using this to do the movement caused issues with collision detection. Instead I used ```Rigidbody.velocity``` after discussion with a peer. 
 Rotation uses Vector Based rotations to escape Quaternion weirdness. This works resonobly well for the game.
 
-The shooting system will summon an ball attack ball and rotate the ball's rotation to the players rotation. The ball has a script to move it forward.
+The shooting system will summon an ball attack ball and rotate the ball's rotation to the players rotation. The ball has a script to move it forward. Collision detection is used with box collisions and tag comparasions. 
 
 ## World Generation
 The world is procedurally generated. There are 3 elements to the generation. Ores, Sentries and rails.
