@@ -161,7 +161,7 @@ MonoBehaviour:
   sentry: {fileID: 8042771671542778404, guid: 2f807230cd2dea848a23e85c2fef6387, type: 3}
   maxNumSentry: 20
   maxBrokenRail: 0
-  immuneRails: 10
+  immuneRails: 5
   length: 160
   interval: 5
 --- !u!4 &126622963
