@@ -35,6 +35,15 @@ public partial class @MenuActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""6a357e75-31aa-42d5-9e95-1698e65e2ca2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -59,6 +68,28 @@ public partial class @MenuActions: IInputActionCollection2, IDisposable
                     ""action"": ""start"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2bc2b8a-2283-4b1f-8806-70a2061ffb4e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b37bb2ce-0339-462f-9ebb-462616681a23"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -68,6 +99,7 @@ public partial class @MenuActions: IInputActionCollection2, IDisposable
         // New action map
         m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
         m_Newactionmap_start = m_Newactionmap.FindAction("start", throwIfNotFound: true);
+        m_Newactionmap_quit = m_Newactionmap.FindAction("quit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -130,11 +162,13 @@ public partial class @MenuActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Newactionmap;
     private List<INewactionmapActions> m_NewactionmapActionsCallbackInterfaces = new List<INewactionmapActions>();
     private readonly InputAction m_Newactionmap_start;
+    private readonly InputAction m_Newactionmap_quit;
     public struct NewactionmapActions
     {
         private @MenuActions m_Wrapper;
         public NewactionmapActions(@MenuActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @start => m_Wrapper.m_Newactionmap_start;
+        public InputAction @quit => m_Wrapper.m_Newactionmap_quit;
         public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -147,6 +181,9 @@ public partial class @MenuActions: IInputActionCollection2, IDisposable
             @start.started += instance.OnStart;
             @start.performed += instance.OnStart;
             @start.canceled += instance.OnStart;
+            @quit.started += instance.OnQuit;
+            @quit.performed += instance.OnQuit;
+            @quit.canceled += instance.OnQuit;
         }
 
         private void UnregisterCallbacks(INewactionmapActions instance)
@@ -154,6 +191,9 @@ public partial class @MenuActions: IInputActionCollection2, IDisposable
             @start.started -= instance.OnStart;
             @start.performed -= instance.OnStart;
             @start.canceled -= instance.OnStart;
+            @quit.started -= instance.OnQuit;
+            @quit.performed -= instance.OnQuit;
+            @quit.canceled -= instance.OnQuit;
         }
 
         public void RemoveCallbacks(INewactionmapActions instance)
@@ -174,5 +214,6 @@ public partial class @MenuActions: IInputActionCollection2, IDisposable
     public interface INewactionmapActions
     {
         void OnStart(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
     }
 }

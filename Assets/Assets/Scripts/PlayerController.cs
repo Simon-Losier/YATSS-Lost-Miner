@@ -134,4 +134,9 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("GameOverState");
         }
     }
+
+    public void onExit(InputAction.CallbackContext context)
+    {
+        Application.Quit();
+    }
 }

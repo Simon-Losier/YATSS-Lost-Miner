@@ -53,6 +53,15 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""ed93c0b8-b1b0-4d46-ad24-5052c5e038f1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -165,6 +174,28 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
                     ""action"": ""Fix"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a137d4dc-f7e5-4609-a2ef-2acb1a174a31"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7898001-8c98-4f6a-a1e5-1af10393f7fa"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -176,6 +207,7 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
         m_Game_Movement = m_Game.FindAction("Movement", throwIfNotFound: true);
         m_Game_Attack = m_Game.FindAction("Attack", throwIfNotFound: true);
         m_Game_Fix = m_Game.FindAction("Fix", throwIfNotFound: true);
+        m_Game_Quit = m_Game.FindAction("Quit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -240,6 +272,7 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Game_Movement;
     private readonly InputAction m_Game_Attack;
     private readonly InputAction m_Game_Fix;
+    private readonly InputAction m_Game_Quit;
     public struct GameActions
     {
         private @ControlActions m_Wrapper;
@@ -247,6 +280,7 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Game_Movement;
         public InputAction @Attack => m_Wrapper.m_Game_Attack;
         public InputAction @Fix => m_Wrapper.m_Game_Fix;
+        public InputAction @Quit => m_Wrapper.m_Game_Quit;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -265,6 +299,9 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
             @Fix.started += instance.OnFix;
             @Fix.performed += instance.OnFix;
             @Fix.canceled += instance.OnFix;
+            @Quit.started += instance.OnQuit;
+            @Quit.performed += instance.OnQuit;
+            @Quit.canceled += instance.OnQuit;
         }
 
         private void UnregisterCallbacks(IGameActions instance)
@@ -278,6 +315,9 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
             @Fix.started -= instance.OnFix;
             @Fix.performed -= instance.OnFix;
             @Fix.canceled -= instance.OnFix;
+            @Quit.started -= instance.OnQuit;
+            @Quit.performed -= instance.OnQuit;
+            @Quit.canceled -= instance.OnQuit;
         }
 
         public void RemoveCallbacks(IGameActions instance)
@@ -300,5 +340,6 @@ public partial class @ControlActions: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnFix(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
     }
 }

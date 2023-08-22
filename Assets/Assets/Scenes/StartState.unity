@@ -496,7 +496,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1055139096}
         m_TargetAssemblyTypeName: menuController, Assembly-CSharp
         m_MethodName: onStart
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -507,6 +507,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5b895de4-7f8c-4d5c-ae37-21fb6778495e
     m_ActionName: New action map/start[/Keyboard/space,/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1055139096}
+        m_TargetAssemblyTypeName: menuController, Assembly-CSharp
+        m_MethodName: onExit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6a357e75-31aa-42d5-9e95-1698e65e2ca2
+    m_ActionName: New action map/quit[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: New action map
