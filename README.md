@@ -56,10 +56,10 @@ The game will be lost in these events:
 
 ## CS50g Requirement: Complexity and Distinctiveness 
 ### Complexity
-I beleave the game hits the complexity requirements as it contains similar systems as other games in the course and mixes them. This game features procedural generation wich is present in most games of the term, item pickup, inventory system, enemies, shooting system. Comparing this to say Dreadhalls, wich contains only procedural generation and a type of pickup, this game is more complex since it contains more systems.
+I beleave the game hits the complexity requirements as it contains similar systems as other games in the course and mixes them. This game features procedural generation wich is present in most games of the term, item pickup, inventory system, enemies, shooting system adn three game states/scenes. Comparing this to say Dreadhalls, wich contains only procedural generation and a type of pickup, this game is more complex since it contains more systems.
 
 ### Distinctiveness
-The game is distinct, there is not a game with the gameplay loop of mining ores, fixing rails, destroying sentries. 
+The game is distinct, there is not a game from the term with the gameplay loop of mining ores, fixing rails and destroying sentries. 
 
 
 # Game Design Doc
