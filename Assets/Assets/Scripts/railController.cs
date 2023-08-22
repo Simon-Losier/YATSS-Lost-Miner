@@ -17,6 +17,7 @@ public class railController : MonoBehaviour
             if (player.isFixing())
             {
                 Debug.Log("Fixing rail!");
+                player.useSteel();
                 fixRail();
             }
         }
