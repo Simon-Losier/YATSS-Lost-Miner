@@ -15,7 +15,7 @@ public class worldGenerator : MonoBehaviour
     public GameObject sentry;
     public int maxNumSentry = 3;
     public int maxBrokenRail = 3;
-    
+    public int immuneRails = 50; // Number of rails before broken rails spawn
     
     public int length = 80;
 
@@ -62,8 +62,7 @@ public class worldGenerator : MonoBehaviour
         {
             Vector3 position = new Vector3(initRail.transform.position.x + (x * lengthOfRailModule), initRail.transform.position.y,
                 initRail.transform.position.z);
-            int immuneRails = 50;
-            if (x>immuneRails && Random.Range(0, 10) > 5) 
+            if (x>immuneRails && Random.Range(0, 10) > 6) 
             {
                 Debug.Log("Broken rail summoned");
                 GameObject rail = Instantiate(brokenRail, position, initRail.transform.rotation);
@@ -80,7 +79,7 @@ public class worldGenerator : MonoBehaviour
         for (int i = 0; i < numSentry; i++)
         {
             int posX = Random.Range(30, length);
-            Vector3 position = new Vector3(Random.Range(0, length), 0, 10);
+            Vector3 position = new Vector3(Random.Range(30, length), 0, 10);
             Instantiate(sentry, position, initSentry.transform.rotation);
         }
         

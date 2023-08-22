@@ -1,0 +1,45 @@
+{
+    "name": "MenuActions",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "31ece62e-d0ac-49cb-98a8-5483229a9d4c",
+            "actions": [
+                {
+                    "name": "start",
+                    "type": "Button",
+                    "id": "5b895de4-7f8c-4d5c-ae37-21fb6778495e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "aabe650c-9de5-4107-b28a-8422c7fd0b9e",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08a21ac4-9683-4ea2-903f-064596dd3bcd",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

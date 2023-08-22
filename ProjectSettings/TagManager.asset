@@ -10,6 +10,8 @@ TagManager:
   - BrokenRail
   - Projectile
   - AttackProjectile
+  - SteelIngot
+  - GoldIngot
   layers:
   - Default
   - TransparentFX

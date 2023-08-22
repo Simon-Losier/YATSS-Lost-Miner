@@ -36,7 +36,7 @@ public class cartController : MonoBehaviour
         if (other.gameObject.CompareTag("BrokenRail") || other.gameObject.CompareTag("AttackProjectile"))
         {
             Debug.Log("Game Over");
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOverState");
         }
     }
 }

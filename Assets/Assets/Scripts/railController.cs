@@ -24,7 +24,7 @@ public class railController : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Cart"))
             {
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("GameOverState");
             }
         }
     }
