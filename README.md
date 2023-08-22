@@ -15,9 +15,9 @@ The shooting system will summon an ball attack ball and rotate the ball's rotati
 
 ## World Generation
 The world is procedurally generated. There are 3 elements to the generation. Ores, Sentries and rails.
-The ores(Steel and Steel) are summoned column by column. At each column an amount of ore will be decided at random, than it is pleaced at a random ```Z``` location. However betwen ```z``` 6-8 is reserved for the cart. Than it is chosen by random wether the ore will be steel or gold
-The senteries have a set number chosen procedurally that will determine the amount of senteries summoned. Than it will summon those senteries at random X locations with the preset location above the rail
-The rails are to a preset length, they start from a preset location. At each iteration of the rail there is a chance of it being broken.
+- The ores(Steel and Steel) are summoned column by column. At each column an amount of ore will be decided at random, than it is pleaced at a random ```Z``` location. However betwen ```z``` 6-8 is reserved for the cart. Than it is chosen by random wether the ore will be steel or gold
+- The senteries have a set number chosen procedurally that will determine the amount of senteries summoned. Than it will summon those senteries at random X locations with the preset location above the rail
+- The rails are to a preset length, they start from a preset location. At each iteration of the rail there is a chance of it being broken.
 
 ## Ores
 There are two types of ores, steel and gold. Steel is used to repair the broken rails and gold is used to reach the win state. The ores are mined using the shooting mechanic, they have a health of 2. When the ore is mined they drop a steel/gold ingot when this ingot is pickedup, the steel/gold is added to the inventory.
