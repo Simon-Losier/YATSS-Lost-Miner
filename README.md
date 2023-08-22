@@ -58,12 +58,32 @@ Asset packs to be used:
 - https://kenney.nl/assets/nature-kit
 
 # General Documentation
-Current documentation is mostly in the project/issues
-https://github.com/users/Simon-Lohttps://github.com/users/Simon-Losier/projects/6/views/1sier/projects/6/views/1
-
 
 ## Movement/Shooting System
 The movement system uses the new unity input system to handle input. To do this I used a combination of this tutorial: https://www.youtube.com/watch?v=m5WsmlEOFiA and the unity input system docs: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.6/manual/index.html
+At first I used ```transform.position``` to move the player and the cart, using this to do the movement caused issues with collision detection. Instead I used ```Rigidbody.velocity``` after discussion with a peer. 
+Rotation uses Vector Based rotations to escape Quaternion weirdness. This works resonobly well for the game.
+
+The shooting system will summon an ball attack ball and rotate the ball's rotation to the players rotation. The ball has a script to move it forward.
+
+## World Generation
+The world is procedurally generated. There are 3 elements to the generation. Ores, Sentries and rails.
+The ores(Steel and Steel) are summoned column by column. At each column an amount of ore will be decided at random, than it is pleaced at a random ```Z``` location. However betwen ```z``` 6-8 is reserved for the cart. Than it is chosen by random wether the ore will be steel or gold
+The senteries have a set number chosen procedurally that will determine the amount of senteries summoned. Than it will summon those senteries at random X locations with the preset location above the rail
+The rails are to a preset length, they start from a preset location. At each iteration of the rail there is a chance of it being broken.
+
+## Ores
+- Ingot
+- Gold
+- Steel
+- 
+## Senteries
+
+## Rails
+
+
+## States/Scenes
+
 
 
 # CS50g Requirement: Complexity and Distinctiveness 
