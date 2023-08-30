@@ -1,8 +1,9 @@
 # YATSS-Lost-Miner
-YATSS: Lost Miner | Simon's Havard's CS50g final project
+YATSS: Lost Miner
 
 # Contributions
-Due to havard academic integrity rules, until the cs50 assignment is submitted and graded contributions(pull requests, bug reports, etc) will be ignored.
+Contributions are welcome! Pull requests will be reviewed and potentially merged. 
+Feel free to join the discord server for the project: https://discord.gg/qCR6sMqrXX
 
 # General Documentation
 
@@ -46,21 +47,6 @@ The game will be lost in these events:
 ## Assets used
 - https://kenney.nl/assets/mini-dungeon
 - https://kenney.nl/assets/nature-kit
-
-## Tools used
-- Unity
-- Rider
-- Blender
-- Affinity Photo
-- https://sfxr.me/
-
-## CS50g Requirement: Complexity and Distinctiveness 
-### Complexity
-I beleave the game hits the complexity requirements as it contains similar systems as other games in the course and mixes them. This game features procedural generation wich is present in most games of the term, item pickup, inventory system, enemies, shooting system adn three game states/scenes. Comparing this to say Dreadhalls, wich contains only procedural generation and a type of pickup, this game is more complex since it contains more systems.
-
-### Distinctiveness
-The game is distinct, there is not a game from the term with the gameplay loop of mining ores, fixing rails and destroying sentries. 
-
 
 # Game Design Doc
 ## Summary
