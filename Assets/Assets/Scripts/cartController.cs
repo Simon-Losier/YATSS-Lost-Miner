@@ -10,21 +10,14 @@ public class cartController : MonoBehaviour
     public int speed = 1;
     // Start is called before the first frame update
     public Vector3 direction = new Vector3(5, 0, 0);
-    void Start()
-    {
-           
-    }
+
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     private void FixedUpdate()
     {
