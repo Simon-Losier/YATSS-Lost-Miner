@@ -7,17 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector2 movementDirection = Vector2.zero;
-    private float attack;
+    private Vector2 _movementDirection = Vector2.zero;
+    private float _attack;
     public int speed = 5;
     public GameObject projectile;
     public bool allowShoot = true;
-    private bool fixing = false; // For fixing rails
+    private bool _fixing = false; // For fixing rails
     private Rigidbody _rigidbody;
-    private int gold = 0;
-    private int steel = 0;
+    private int _gold = 0;
+    private int _steel = 0;
     public int quota = 10;
-    private KeyValuePair<string, int> inventory;
+    private KeyValuePair<string, int> _inventory;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -26,12 +26,12 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         
-        _rigidbody.velocity = new Vector3(movementDirection.x, 0, movementDirection.y) * Time.deltaTime * speed;
+        _rigidbody.velocity = new Vector3(_movementDirection.x, 0, _movementDirection.y) * Time.deltaTime * speed;
         
         // Citation for Vector2 based rotation: https://stackoverflow.com/questions/65752543/gameobject-rotation-based-vector2-direction
-        if (!movementDirection.Equals(Vector2.zero))
+        if (!_movementDirection.Equals(Vector2.zero))
         {
-            transform.right = new Vector3(movementDirection.x, 0, movementDirection.y);
+            transform.right = new Vector3(_movementDirection.x, 0, _movementDirection.y);
         }
 
     }
@@ -39,93 +39,92 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attack == 1 && allowShoot)
+        if (_attack == 1 && allowShoot)
         {
-            shoot();
+            Shoot();
             allowShoot = false;
         }
 
-        if (attack == 0)
+        if (_attack == 0)
         {
             allowShoot = true;
         }
 
-        if (gold >= quota)
+        if (_gold >= quota)
         {
             SceneManager.LoadScene("WinState");
         }
     }
 
-    public bool isFixing()
+    public bool _isFixing()
     {
-        if (steel > 0)
+        if (_steel > 0)
         {
-            return fixing;
+            return _fixing;
         }
 
         return false;
     }
 
-    public bool useSteel()
+    public bool _useSteel()
     {
-        if (steel > 0)
+        if (_steel > 0)
         {
-            steel--;
+            _steel--;
             return true;
         }
 
         return false;
     }
-    private void shoot()
+    private void Shoot()
     {
         // Create the mining orb
-        float distanceFromPlayer = 0.2f;
         GameObject instance = Instantiate(projectile, transform.position, transform.rotation);
         instance.transform.right = transform.right;
     }
-    public void onMove(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        movementDirection = context.ReadValue<Vector2>();
+        _movementDirection = context.ReadValue<Vector2>();
     }
 
-    public void onAttack(InputAction.CallbackContext context)
+    public void OnAttack(InputAction.CallbackContext context)
     {
-        attack = context.ReadValue<float>();
+        _attack = context.ReadValue<float>();
     }
 
-    public void onFix(InputAction.CallbackContext context)
+    public void OnFix(InputAction.CallbackContext context)
     {
         float value = context.ReadValue<float>();
         if (value == 1)
         {
-            fixing = true;
+            _fixing = true;
         }
         else
         {
-            fixing = false;
+            _fixing = false;
         }
     }
 
-    public int getGold()
+    public int GetGold()
     {
-        return gold;
+        return _gold;
     }
 
-    public int getSteel()
+    public int GetSteel()
     {
-        return steel;
+        return _steel;
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("GoldIngot"))
         {
-            gold++;
+            _gold++;
             Destroy(other.gameObject);
             return;
         }
         if (other.gameObject.CompareTag("SteelIngot"))
         {
-            steel++;
+            _steel++;
             Destroy(other.gameObject);
             return;
         }
@@ -135,7 +134,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void onExit(InputAction.CallbackContext context)
+    public void OnExit(InputAction.CallbackContext context)
     {
         Application.Quit();
     }

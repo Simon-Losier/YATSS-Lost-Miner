@@ -21,8 +21,8 @@ public class uiController : MonoBehaviour
     void Update()
     {
         string message = "Quota: " + _playerController.quota + " Gold \n";
-        message = message + "GOLD: " + _playerController.getGold() + "\n";
-        message = message + "STEEL: " + _playerController.getSteel() + "\n";
+        message = message + "GOLD: " + _playerController.GetGold() + "\n";
+        message = message + "STEEL: " + _playerController.GetSteel() + "\n";
         _textMeshPro.text = message;
     }
 }

@@ -14,10 +14,10 @@ public class railController : MonoBehaviour
         {
             Debug.Log("Collided with player");
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
-            if (player.isFixing())
+            if (player._isFixing())
             {
                 Debug.Log("Fixing rail!");
-                player.useSteel();
+                player._useSteel();
                 fixRail();
             }
         }
