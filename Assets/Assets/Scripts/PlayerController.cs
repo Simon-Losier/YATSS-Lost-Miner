@@ -81,7 +81,9 @@ public class PlayerController : MonoBehaviour
         // Create the mining orb
         GameObject instance = Instantiate(projectile, transform.position, transform.rotation);
         instance.transform.right = transform.right;
+        instance.GetComponent<moveForward>().SetDirection(transform.right);
     }
+    
     public void OnMove(InputAction.CallbackContext context)
     {
         _movementDirection = context.ReadValue<Vector2>();

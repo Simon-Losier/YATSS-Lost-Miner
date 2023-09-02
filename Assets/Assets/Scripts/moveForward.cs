@@ -5,23 +5,22 @@ using UnityEngine;
 
 public class moveForward : MonoBehaviour
 {
-    public int speed = 5;
-
+    public int speed = 200;
+    private Vector3 _direction;
     private Rigidbody _rigidbody;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetDirection(Vector3 direction)
     {
-        _rigidbody.velocity = transform.right * speed * Time.deltaTime;
+        _direction = direction;
+    }
+
+    void FixedUpdate()
+    {
+        _rigidbody.velocity = _direction * speed * Time.deltaTime;
     }
 }
