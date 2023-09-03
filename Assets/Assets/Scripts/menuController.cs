@@ -5,14 +5,14 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Application = UnityEngine.Device.Application;
 
-public class menuController : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
-    public void onStart(InputAction.CallbackContext context)
+    public void OnStart(InputAction.CallbackContext context)
     {
         SceneManager.LoadScene("PlayState");
     }
 
-    public void onExit(InputAction.CallbackContext context)
+    public void OnExit(InputAction.CallbackContext context)
     {
         Application.Quit();
     }

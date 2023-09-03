@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class uiController : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     public GameObject player;
     private PlayerController _playerController;

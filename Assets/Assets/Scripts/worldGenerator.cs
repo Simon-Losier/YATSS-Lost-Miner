@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class worldGenerator : MonoBehaviour
+public class WorldGenerator : MonoBehaviour
 {
     public GameObject gold;
     public GameObject steel;
@@ -23,11 +23,11 @@ public class worldGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        generateWorld();
+        GenerateWorld();
         Destroy(initSentry.gameObject);
     }
 
-    void generateWorld()
+    void GenerateWorld()
     {
         for (int x = 0; x < length; x += interval)
         {

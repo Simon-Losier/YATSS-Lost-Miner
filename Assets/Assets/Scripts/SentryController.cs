@@ -3,25 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sentryController : MonoBehaviour
+public class SentryController : MonoBehaviour
 {
     public int health = 3;
     public float shootIntervalSec = 2f;
     public GameObject projectile;
 
     // CITATION: Learned about coroutines here: https://stackoverflow.com/questions/61439740/how-can-i-make-an-action-repeat-every-x-seconds-with-timer-in-c
-    IEnumerator shootInterval()
+    IEnumerator ShootInterval()
     {
         while (true)
         {
             yield return new WaitForSeconds(shootIntervalSec);
-            spawnProjectile();
+            SpawnProjectile();
         }
     }
     
     void Start()
     {
-        StartCoroutine(shootInterval());
+        StartCoroutine(ShootInterval());
     }
 
     // Update is called once per frame
@@ -35,16 +35,16 @@ public class sentryController : MonoBehaviour
         // TODO: Automating shooting of the projectile
     }
 
-    private void spawnProjectile()
+    private void SpawnProjectile()
     {
         Debug.Log("Spawn projectile");
         Vector3 position = new Vector3(this.transform.position.x, this.transform.position.y+1.3f, this.transform.position.z-0.7f);
         GameObject instance = Instantiate(projectile, position, Quaternion.identity);
         instance.transform.right = -instance.transform.forward;
-        instance.GetComponent<moveForward>().SetDirection(-instance.transform.forward);
+        instance.GetComponent<MoveForward>().SetDirection(-instance.transform.forward);
     }
     
-    private void hit()
+    private void Hit()
     {
         health--;
     }
@@ -53,7 +53,7 @@ public class sentryController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            hit();
+            Hit();
         }
     }
 }

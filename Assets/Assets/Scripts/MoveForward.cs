@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveForward : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
     public int speed = 200;
     private Vector3 _direction;

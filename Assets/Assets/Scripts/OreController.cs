@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class oreController : MonoBehaviour
+public class OreController : MonoBehaviour
 {
     public string oreType = "gold"; // Possible: gold, steel
-    public GameObject Ingot;
+    [FormerlySerializedAs("Ingot")] public GameObject ingot;
     public int health = 2;
     
     void Start()
@@ -15,7 +16,7 @@ public class oreController : MonoBehaviour
         
     }
 
-    public void hit()
+    public void Hit()
     {
         Debug.Log("I was hit D:");
         health = Math.Min(health, health - 1); 
@@ -26,7 +27,7 @@ public class oreController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            hit();
+            Hit();
         }
     }
 
@@ -36,7 +37,7 @@ public class oreController : MonoBehaviour
         if (health <= 0)
         {
             // Drop ore item
-            Instantiate(Ingot, this.transform.position, Quaternion.identity);
+            Instantiate(ingot, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject, 0);
         }
     }

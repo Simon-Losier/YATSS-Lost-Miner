@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class railController : MonoBehaviour
+public class RailController : MonoBehaviour
 {
     public GameObject fixedRail;
     
@@ -18,7 +18,7 @@ public class railController : MonoBehaviour
             {
                 Debug.Log("Fixing rail!");
                 player._useSteel();
-                fixRail();
+                FixRail();
             }
         }
         else
@@ -30,7 +30,7 @@ public class railController : MonoBehaviour
         }
     }
 
-    private void fixRail()
+    private void FixRail()
     {
         Instantiate(fixedRail, transform.position, transform.rotation);
         Destroy(this.gameObject);

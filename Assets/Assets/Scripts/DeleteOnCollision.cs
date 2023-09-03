@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class deleteOnCollision : MonoBehaviour
+public class DeleteOnCollision : MonoBehaviour
 {
     public string excludeTag = "Sentry";
     // Start is called before the first frame update

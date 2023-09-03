@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ingotController : MonoBehaviour
+public class IngotController : MonoBehaviour
 {
 
     public string oreType = "gold"; // Possible: gold, steel
 
-    private void pickup()
+    private void Pickup()
     {
         Destroy(this.gameObject);
     }
@@ -16,7 +16,7 @@ public class ingotController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            pickup();
+            Pickup();
         }
     }
 }

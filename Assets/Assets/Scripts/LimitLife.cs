@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class limitLife : MonoBehaviour
+public class LimitLife : MonoBehaviour
 {
     public int time = 2;
     void Start()
