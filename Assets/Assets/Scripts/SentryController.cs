@@ -40,7 +40,6 @@ public class SentryController : MonoBehaviour
         Debug.Log("Spawn projectile");
         Vector3 position = new Vector3(this.transform.position.x, this.transform.position.y+1.3f, this.transform.position.z-0.7f);
         GameObject instance = Instantiate(projectile, position, Quaternion.identity);
-        instance.transform.right = -instance.transform.forward;
         instance.GetComponent<MoveForward>().SetDirection(-instance.transform.forward);
     }
     
