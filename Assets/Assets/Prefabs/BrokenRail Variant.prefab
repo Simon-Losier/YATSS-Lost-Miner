@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b0b6f20d07f1e9b48a274a1efcb3381b, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0b6f20d07f1e9b48a274a1efcb3381b, type: 3}
       propertyPath: m_Name
       value: BrokenRail Variant
@@ -89,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fixedRail: {fileID: 996891665552046962, guid: b4d613bb2f1f24b42901fdc51e46f0a4, type: 3}
+  isBroken: 1
 --- !u!65 &2761842069470955861
 BoxCollider:
   m_ObjectHideFlags: 0

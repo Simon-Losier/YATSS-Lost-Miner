@@ -7,6 +7,24 @@ using UnityEngine.SceneManagement;
 public class RailController : MonoBehaviour
 {
     public GameObject fixedRail;
+    public bool isBroken;
+    private static List<GameObject> _rails = new List<GameObject>();
+    private void OnEnable()
+    {
+        if (isBroken)
+        {
+            _rails.Add(this.gameObject);
+        }
+        
+    }
+
+    private void OnDisable()
+    {
+        if (isBroken)
+        {
+            _rails.Remove(this.gameObject);
+        }
+    }
     
     private void OnTriggerEnter(Collider other)
     {
