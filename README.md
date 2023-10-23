@@ -3,10 +3,6 @@ YATSS: Lost Miner
 
 [![Build project](https://github.com/Simon-Losier/YATSS-Lost-Miner/actions/workflows/main.yml/badge.svg)](https://github.com/Simon-Losier/YATSS-Lost-Miner/actions/workflows/main.yml)
 
-# Contributions
-Contributions are welcome! Pull requests will be reviewed and potentially merged. 
-Feel free to join the discord server for the project: https://discord.gg/qCR6sMqrXX
-
 # General Documentation
 
 ## Movement/Shooting System
